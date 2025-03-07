@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = prompt("Mời bạn nhập vào mảng").split("");
+      let flaght  = 0;
+      for (const element of array) {
+        if (isNaN(element)) {
+          flaght++;
+        }
+      }
+      if (flaght !== 0) {
+        console.log("Dãy số không hợp lệ rồi");
+      } else {
+        let max = 0;
+        for (const element of array) {
+          if (element > max) {
+            max = element;
+          }
+        }
+        console.log(`Số lớn nhất là: ${max}`);
+      }
+    </script>
+  </body>
+</html>
