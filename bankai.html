@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number = [1, 3 , 3 , 3, 4 , 4 , 5];
+      let input = Number(prompt("Mời bạn nhập vào số cần tìm"));
+      let count = 0;
+      for (const element of number) {
+        if (input === element) {
+          count++;
+        }
+      }
+      console.log(
+        count !== 0
+          ? `Số ${input} xuất hiện ${count} lần`
+          : `Số ${input} không có tồn tại trong mảng`
+      );
+    </script>
+  </body>
+</html>
