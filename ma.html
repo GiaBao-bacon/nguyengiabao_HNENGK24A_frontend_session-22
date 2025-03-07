@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array  = prompt("Mời bạn nhập vào mảng").split("");
+      let flaght  = 0;
+      for (const element of array ) {
+        if (isNaN(element)) {
+          flaght++;
+        }
+      }
+      if (flaght !== 0) {
+        console.log("Dãy không hợp lệ");
+      } else {
+        let odd = 0;
+        let even = 0;
+        for (const element of array) {
+          if (Number(element) % 2 == 0) {
+            even = even + Number(element);
+          } else {
+            odd = odd + Number(element);
+          }
+        }
+        console.log(`Tổng các số chẵn là: ${even}`);
+        console.log(`Tổng các số lẻ là: ${odd}`);
+      }
+    </script>
+  </body>
+</html>
