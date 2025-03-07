@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrnay = prompt("Nhập vào mảng").split("");
+      let flagth = 0;
+      for (const element of arrnay) {
+        if (isNaN(element)) {
+          flagth++;
+        }
+      }
+      if (flagth !== 0) {
+        console.log("Dãy không hợp lệ");
+      } else {
+        let arrayReverse = arrnay.reverse();
+        let reverseString = "";
+        for (const element of arrayReverse) {
+          reverseString += element;
+        }
+        console.log(reverseString);
+      }
+    </script>
+  </body>
+</html>
